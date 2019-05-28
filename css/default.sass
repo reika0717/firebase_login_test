@@ -1,0 +1,965 @@
+/*フォント*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap')
+/*共通*/
+$MAIN_COLOR: #307bf8
+$MAIN_COLOR_HOVER: #0069b2
+$BLACK: #1a1717
+
+
+@mixin h2_title
+	font-family: Montserrat
+	font-size: 55px
+	font-weight: 600
+
+@mixin button
+	font-family: Montserrat
+	font-size: 13px
+	letter-spacing: .65px
+	color: #ffffff
+	border-radius: 68px
+	background-color: #008EF0
+	padding: 26px 31.9px
+	white-space: nowrap
+	text-decoration: none
+	&:after
+		content: ''
+		width: 16px
+		height: 11.5px
+		background-image: url(../svg/arr-nomal.svg)
+		display: inline-block
+		-webkit-text-fill-color: #fff
+		fill: white
+		margin-left: 45px
+		background-repeat: no-repeat
+		background-size: 13px 10.5px
+		background-position: 2.4px 2.4px
+
+@mixin controler
+	display: flex
+	align-items: center
+	margin-right: 36px
+	.num
+		font-family: Montserrat
+		font-size: 14px
+		color: #322e2e
+		margin: 0 11px 0 9px
+		.slash
+			font-size: 11px
+	.prev,
+	.next
+		width: 10px
+		height: 10px
+		padding: 11px
+		border-radius: 33px
+		background-color: #008ef0
+
+/* スタイル */
+html
+	// font-size: 1.25vw //16px
+	font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif
+	body
+		header
+			width: 1189.945px
+			height: 100vh
+			margin: 4px auto 0
+			nav
+				width: 100%
+				display: flex
+				justify-content: space-between
+				.logo
+					width: 71.5px
+					margin-top: 60.5px
+				.global_nav
+					&.pc
+						display: flex
+						margin-top: 88.5px
+					&.sp
+						display: none
+					li
+						a
+							display: flex
+							flex-direction: column
+							font-family: 'Montserrat', sans-serif
+							font-size: 13px
+							font-weight: 600
+							letter-spacing: 0.65px
+							text-align: center
+							color: #322e2e
+							text-decoration: none
+						span
+							font-size: 12px
+							letter-spacing: 1.8px
+							font-weight: normal
+							margin-top: 6px
+						&.active
+							a
+								color: $MAIN_COLOR
+								&:before
+									content: ''
+									width: 6px
+									height: 6px
+									border-radius: 100px
+									margin: -12.7px auto 8.5px
+									background-color: $MAIN_COLOR
+						&:nth-of-type(2)
+							margin-left: 35.5px
+			.main_visual
+				display: flex
+				margin-top: 24px
+				.main_visual_text_wrapper
+					width: 32.14%
+					.main_copy_wrapper
+						position: relative
+						.ttl_flame
+							width: 255.5px
+							position: absolute
+							top: 97px
+							left: 44px
+						.main_copy
+							font-size: 37px
+							font-weight: bold
+							letter-spacing: 1px
+							line-height: 1.29
+							color: #403c3c
+							text-align: center
+							margin-bottom: 11px
+							padding-top: 156px
+							.tsume
+								margin-left: -33px
+						.sub_copy
+							font-family: Montserrat
+							font-weight: 600
+							line-height: 1.5
+							letter-spacing: 0.6px
+							text-align: center
+							color: #322e2e
+							font-size: 10px
+							margin-left: -43px
+					.title_contoler_wrapper
+						margin-top: 120px
+						margin-bottom: -40px
+						.news_title
+							font-family: Montserrat
+							font-size: 17px
+							font-weight: 600
+							letter-spacing: 1.15px
+							color: #322e2e
+							&:before
+								content: ''
+								width: 8px
+								height: 8px
+								border-radius: 8px
+								background-color: #008ef0
+								display: inline-block
+								margin: -1px 8px 0 2px
+					.swiper-container
+						padding-top: 48px
+						.swiper-pagination
+							display: inline-block
+							text-align: right
+							margin-bottom: 33px
+							padding-right: 83px
+							box-sizing: border-box
+							font-size: 12px
+							letter-spacing: 1px
+							.swiper-pagination-current,
+							.swiper-pagination-total
+								font-family: Montserrat
+								font-size: 14px
+								color: #322e2e	
+						.news_list
+							margin-top: 21px
+							letter-spacing: 0.2px
+							height: 14px
+							.news
+								font-size: 14px
+								color: #322e2e
+								white-space: nowrap
+								width: 387.44px
+						.swiper-button-prev
+							width: 32.5px
+							height: 31.5px
+							background: url(../svg/arr-prev-white.svg) no-repeat
+							background-color: #008ef0
+							border-radius: 100px
+							opacity: 1 !important
+							background-size: 6px 11px
+							background-position: center
+							margin-left: 213px
+							top: 47%
+							&:hover
+								cursor: pointer
+								background-color: $MAIN_COLOR_HOVER
+						.swiper-button-next
+							width: 32.5px
+							height: 31.5px
+							background: url(../svg/arr-next-white.svg) no-repeat
+							background-color: #008ef0
+							border-radius: 100px
+							opacity: 1 !important
+							background-size: 6px 11px
+							background-position: center
+							top: 47%
+							margin-right: 29px
+							&:hover
+								cursor: pointer
+								background-color: $MAIN_COLOR_HOVER
+				.main_visual_image_wrapper
+					width: 810px
+					height: 559px
+					position: relative
+					.main_visual_image
+						width: 810px
+						height: 559px
+						transform: translateX(5px)
+						object-fit: cover
+						border-radius: 25px
+					.down
+						width: 12.5px
+						height: 15.5px
+						background: #008ef0
+						position: absolute
+						right: 20px
+						bottom: 25px
+						padding: 24.8px 26.3px
+						border-radius: 100px
+		.sub_visual
+			width: 100vw
+			height: 600px
+			min-width: 1189.945px
+			// height: 46.875vw
+			object-fit: cover
+			margin-top: 145px
+		.about_wrapper
+			width: 86.67vw
+			margin: 0 auto
+			position: relative
+			min-width: 1109.33px
+			.sub_visual_small
+				width: 255px
+				height: 366px
+				object-fit: cover
+				position: absolute
+				z-index: 2
+				border-radius: 20px
+			.sub_visual_small_1
+				right: 0
+				top: -51px
+			.sub_visual_small_2
+				left: 0
+				top: 346.5px
+			.sub_visual_small_3
+				right: 0
+				top: 702.5px
+			.concept_wrapper
+				text-align: center
+				padding-top: 179px
+				.concept_title
+					margin-bottom: 12px
+					font-family: Montserrat
+					font-size: 63px
+					font-weight: 600
+					letter-spacing: 3.15px
+					text-align: center
+					color: #322e2e
+					display: inline-block
+					position: relative
+					&:after
+						content: ''
+						display: inline-block
+						width: 101%
+						height: 4px
+						border-radius: 4px
+						background-color: #322e2e
+						position: absolute
+						top: 58px
+						left: 0
+			.concept_sub_title
+				text-align: center
+				font-size: 27px
+				font-weight: bold
+				letter-spacing: 3.1px
+				color: #322e2e
+				margin: 46px 0 51px 19px
+				.tsume
+					margin-left: -10px
+				.emphasis
+					color: $MAIN_COLOR
+			.concept_description
+				text-align: center
+				font-size: 16px
+				line-height: 2.7
+				color: #322e2e
+		.new_open_wrapper
+			width: 100vw
+			min-width: 1189.945px
+			background-color: #322e2e
+			margin-top: 164px
+			.new_open_inner
+				width: 1109.33px
+				margin: 0 auto
+				padding: 132px 0 0 0
+				.h2
+					display: flex
+					align-items: center
+					height: 95px
+					margin-left: -24px
+					letter-spacing: 0.5px
+					.new_open_logo
+						font-size: 14px
+						font-weight: bold
+						letter-spacing: 2.1px
+						color: #ffffff
+						width: 72px
+						height: 93px
+						background-image: url(../svg/ttl-flame-white.svg)
+						display: flex
+						justify-content: center
+						padding-top: 28px
+						line-height: 17px
+						background-repeat: no-repeat
+						box-sizing: border-box
+						margin-right: 22px
+						background-position: -2px 0px
+					.h2_title
+						@include h2_title
+						color: #ffffff
+				.new_open_content
+					display: flex
+					margin-top: 50px
+					.office_img_active
+						width: 552.4px
+						height: 391px
+						object-fit: cover
+						margin-left: 17px
+						border-radius: 13px
+					.contoler
+						@include controler
+						margin-right: 36px
+						margin-top: 59px
+						margin-left: -32px
+						.num
+							color: #fff
+							margin: 0 5px
+							.slash
+								margin-left: -4px
+								font-size: 8px
+						.prev,
+						.next
+							width: 10px
+							height: 10px
+							padding: 16px
+					.new_open_text
+						padding-left: 85.2px
+						margin-top: 17px
+						.office_name
+							font-size: 27px
+							font-weight: bold
+							line-height: 1.75em
+							color: #ffffff
+						.office_address
+							font-size: 15px
+							line-height: 1.85em
+							color: #ffffff
+							margin-top: 9px
+							margin-bottom: 9px
+						.office_google_map
+							font-family: Montserrat
+							font-size: 15px
+							color: #ffffff
+							text-decoration: none
+							margin-left: -5px
+							&:hover
+								color: #008ef0
+							.placeholder_icon
+								width: 25.1px
+								margin-right: 2px
+								transform: translateY(8.2px)
+						.office_detail_link
+							@include button
+							display: block
+							width: 150px
+							margin-top: 50px
+							margin-left: 2px
+							&:hover
+								background-color: $MAIN_COLOR_HOVER
+						.office_pic_thumbnail	
+							display: flex
+							margin-top: 119px
+							margin-left: -40px
+							transform: translateY(41px)
+							justify-content: space-between
+							width: 467px
+							.office_small_pic
+								width: 126px
+								height: 126px
+								object-fit: cover
+								border-radius: 100px
+		.shop_info
+			width: 1110px
+			margin: 144px auto 0
+			letter-spacing: .5px
+			.h2
+				display: flex
+				align-items: center
+				.shop_info_logo
+					font-size: 14px
+					font-weight: bold
+					letter-spacing: 2.1px
+					color: $BLACK
+					width: 72px
+					height: 93px
+					background-image: url(../svg/ttl-flame.svg)
+					display: flex
+					justify-content: center
+					padding-top: 28px
+					line-height: 17px
+					background-repeat: no-repeat
+					box-sizing: border-box
+					margin-right: 19px
+					background-position: -2px 0px
+				.h2_title
+					@include h2_title
+					color: $BLACK
+			.shop_info_content
+				display: flex
+				margin-top: 54px
+				.shop_info_text
+					.shop_list
+						width: 293.5px
+						margin-right: 85.5px
+						margin-top: 7px
+						.shop
+							font-size: 15px
+							font-weight: bold
+							line-height: 4.95
+							color: $BLACK
+							border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+							margin-left: -5px
+							padding-left: 9.4px
+							display: flex
+							align-items: center
+							justify-content: space-between
+							a
+								color: $BLACK
+								text-decoration: none
+							&:after
+								content: ''
+								width: 13px
+								height: 11px
+								display: inline-block
+								background-image: url('../svg/arr-nomal-blue.svg')
+								margin-right: 20px
+							&:hover
+								a
+									color: #008ef0
+							&.disabled
+								a
+									color: rgba(26, 23, 23, 0.4)
+									pointer-events: none
+								&:after
+									background-image: url('../svg/arr-nomal-gray.svg')
+				.shop_info_map
+					width: 724.5px
+					height: 597.5px
+					border-radius: 15px
+					background-color: #322e2e
+					margin-top: 6px
+					position: relative
+					.japan_map
+						position: absolute
+						width: 639px
+						top: 45px
+						right: 42.7px
+					.abroad_wrapper
+						display: inline-block
+						border-right: 1px solid rgba(255, 255, 255, .5)
+						border-bottom: 1px solid rgba(255, 255, 255, .5)
+						width: 125px
+						height: 125px
+						padding: 0
+						display: flex
+						flex-direction: column
+						align-items: center
+						justify-content: center
+						margin-top: 49px
+						margin-left: 48px
+					.region_name
+						font-size: 17px
+						color: #ffffff
+						&.abroad
+							margin-bottom: 11px
+							margin-top: 4px
+							margin-left: 2px
+					.region_num
+						font-family: Montserrat
+						font-size: 10px
+						font-weight: 600
+						color: #ffffff
+						background-color: #008ef0
+						border-radius: 50px
+						width: 40px
+						height: 40px
+						display: inline-block
+						display: flex
+						align-items: center
+						justify-content: center
+					.single_region
+						position: absolute
+						&.hokkaido
+							top: 98px
+							right: 107px
+						&.tohoku
+							top: 270px
+							right: 172px
+							display: flex
+							flex-direction: row-reverse
+							align-items: center
+						&.kanto
+							top: 417px
+							right: 207px
+							display: flex
+							flex-direction: row-reverse
+							align-items: center
+						&.hokuriku
+							top: 316px
+							right: 269px
+							display: flex
+							flex-direction: column
+							align-items: center
+						&.toukai
+							top: 406px
+							right: 346px
+							display: flex
+							flex-direction: column-reverse
+							align-items: center
+						&.chugoku
+							top: 354px
+							right: 476px
+							display: flex
+							flex-direction: column
+							align-items: center
+						&.kyushu
+							top: 435px
+							right: 568px
+							display: flex
+							flex-direction: column-reverse
+							align-items: center
+						.region_name
+						.region_num
+							&.hokkaido
+								margin-top: 9px
+								margin-left: 5px
+							&.tohoku
+								margin-right: 9px
+							&.kanto
+								transform: scale(2)
+								margin-right: 30px
+							&.hokuriku
+								margin-top: 10px
+							&.toukai
+								margin-bottom: 11px
+							&.chugoku
+								margin-top: 9px
+							&.kyushu
+								margin-bottom: 8px
+					.link_for_region_status
+						text-decoration: none
+						font-size: 13px
+						font-weight: bold
+						color: #ffffff
+						padding: 12.1px 24.2px
+						border: 1px solid rgba(255, 255, 255, .5)
+						position: absolute
+						right: 51px
+						bottom: 42px
+			.link_btn
+				@include button
+				display: inline-block
+				width: 151px
+				margin-top: 68px
+				margin-left: -6px
+				&:after
+					margin-left: 68px
+		.wanted
+			width: 100vw
+			margin-top: 136px
+			.banner
+				width: 86.67vw
+				min-width: 1110px
+				height: 270px
+				object-fit: cover
+				margin: 0 auto
+				background: #221f1f
+				position: relative
+				border-radius: 15px
+				.banner_image
+					width: 100%
+					height: 270px
+					object-fit: cover
+					border-radius: 15px
+					position: absolute
+				.wanted_title
+					font-family: Montserrat
+					font-size: 45px
+					font-weight: 600
+					color: #ffffff
+					margin-left: 83px
+					transform: translateY(91px)
+					letter-spacing: 0.7px
+				.wanted_text
+					font-size: 15px
+					color: #ffffff
+					margin-left: 83px
+					transform: translateY(111px)
+				.link_btn
+					@include button
+					position: absolute
+					right: 45px
+					bottom: -33px
+					padding: 25px 29.9px
+					cursor: pointer
+					&:after
+						background-image: url('../svg/blank.svg')
+						width: 16px
+						height: 13.5px
+						margin-left: 45px
+						background-size: 15px 12.5px
+						background-position: 2.4px 0.4px
+						padding-bottom: 2px
+						transform: translateY(4.4px)
+		footer
+			width: 100vw
+			min-width: 1189.945px
+			margin-top: 190px
+			background-color: #322e2e
+			color: white
+			display: flex
+			.footer_inner
+				width: 86.67vw
+				height: 345px
+				padding-top: 124.5px
+				min-width: 1110px
+				margin: 0 auto
+				display: flex
+				justify-content: space-between
+				box-sizing: border-box
+				position: relative
+				.scroll_to_top
+					width: 12.5px
+					height: 15.5px
+					transform: rotate(180deg)
+					background: #008ef0
+					position: absolute
+					right: 0px
+					top: -31px
+					padding: 24.8px 26.3px
+					border-radius: 100px
+				.logo_wrapper
+					.logo
+						width: 103px
+						height: 110px
+						display: inline-block
+				.footer_text
+					.site_map
+						display: flex
+						justify-content: flex-end
+						li
+							a
+								font-size: 13px
+								letter-spacing: 0.9px
+								color: #ffffff
+								text-decoration: none
+								&:hover
+									color: #008ef0
+							&:nth-of-type(2)
+								margin-left: 36.5px
+					.contact
+						display: flex
+						justify-content: flex-end
+						margin-top: 23px				
+						li
+							a
+								font-size: 13px
+								letter-spacing: 0.09px
+								color: #ffffff
+								text-decoration: none
+							&:hover
+								a
+									color: #008ef0
+								&:after
+									background-image: url('../svg/blank-blue.svg')
+							&:after
+								content: ''
+								display: inline-block
+								margin-left: 5.1px
+								background-image: url('../svg/blank.svg')
+								width: 12px
+								height: 12px
+							&:nth-of-type(2)
+								margin-left: 36.5px
+					.copyright
+						font-family: Montserrat
+						font-size: 12px
+						color: rgba(255, 255, 255, 0.3)
+						text-align: right
+						margin-top: 44px
+						margin-right: -1px
+						letter-spacing: 0.1px
+
+//shop 
+.shop_header
+	width: 86.67vw
+	min-width: 1189.945px
+	.shop_title
+		font-family: Montserrat
+		font-size: 80px
+		font-weight: 600
+		line-height: 1
+		color: $BLACK
+		margin-top: 119px
+		margin-left: 42px
+	.shop_sub_title
+		font-size: 20px
+		font-weight: bold
+		letter-spacing: 2px
+		color: $BLACK
+		margin-top: 30px
+		margin-left: 43px
+		.line
+			width: 19px
+			height: 1px
+			display: inline-block
+			background-color: $BLACK
+			margin: 0 11.5px 6px 13px
+	.sort_section
+		display: flex
+		align-items: center
+		.sort_by
+			@include button
+			margin-top: 59px
+			margin-left: 42px
+			width: 172px
+			display: flex
+			align-items: center
+			padding: 22px 31.9px
+			letter-spacing: -0.35px
+			&:focus
+				outline: none
+			&:after
+				content: ''
+				width: 31px
+				height: 13.5px
+				background-image: url(../svg/minus.svg)
+				display: inline-block
+				-webkit-text-fill-color: #fff
+				fill: white
+				margin-left: 42px
+				background-repeat: no-repeat
+				background-size: 18px 10.5px
+				background-position: 0px 2.4px
+				transform: translateX(2px)
+			&.hidden
+				&:after
+					background-image: url(../svg/plus.svg)
+					width: 16px
+					height: 16px
+					margin-left: 38px
+					background-size: 12px 12px
+					background-position: 1.4px 2.4px
+					transform: translateX(3px)
+		.region_list
+			display: flex
+			margin-left: 48px
+			margin-top: 54px
+			justify-content: space-between
+			width: 664px
+			.region
+				font-size: 15px
+				font-weight: bold
+				&.all
+					color: #008ef0
+			&.hidden
+				display: none
+	.about_us
+		width: calc(100% - 84px)
+		min-width: 1080px
+		border-radius: 15px
+		background-color: #322e2e
+		display: flex
+		margin: 96px auto 0
+		padding: 51px 90px 54px 41px
+		box-sizing: border-box
+		.about_us_title
+			.en
+				font-family: Montserrat
+				font-size: 17px
+				font-weight: 600
+				letter-spacing: .85px
+				color: #ffffff
+				&:before
+					content: ''
+					width: 8px
+					height: 8px
+					background-color: #008ef0
+					border-radius: 10px
+					margin-right: 10.5px
+					display: inline-block
+			.ja
+				font-size: 27px
+				font-weight: bold
+				color: #ffffff
+				white-space: nowrap
+				margin-top: 16px
+				letter-spacing: -0.2px
+		.about_us_text
+			font-size: 16px
+			line-height: 1.7
+			color: #ffffff
+			margin-left: 88px
+			margin-top: -5px
+.shop_list_wrapper
+	width: 86.67vw
+	min-width: 1189.945px
+	margin: 112px auto 0
+	.shop_list
+		width: calc(100% - 84px)
+		min-width: 1080px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin: 0 auto
+		.shop
+			width: calc((100% - 86px) / 3)
+			height: 586px
+			position: relative
+			margin-top: 110px
+			.shop_image
+				width: 100%
+				height: 241.5px
+				object-fit: cover
+				border-radius: 15px
+			.shop_region
+				font-size: 12px
+				display: inline-block
+				font-weight: bold
+				color: #ffffff
+				padding: 7.5px 27.5px
+				border-radius: 13.5px
+				background-color: #008ef0
+				position: absolute
+				top: 199px
+				right: 15px
+			.shop_name
+				font-size: 20px
+				font-weight: bold
+				line-height: 1.7
+				color: $BLACK
+				margin-top: 39px
+			.shop_address
+				font-size: 15px
+				line-height: 1.7
+				color: $BLACK
+				margin-top: 18px
+			.google
+				display: flex
+				align-items: center
+				p
+					font-family: Montserrat
+					font-size: 15px
+					color: $BLACK
+					margin-top: 17px
+				.placeholder
+					width: 25px
+					margin-right: 7px
+					margin-top: 20px
+					margin-left: -5px
+			.link_for_detail
+				@include button
+				display: inline-block
+				padding: 28px 29.9px
+				position: absolute
+				bottom: 11px
+				left: 0
+.pagenation_wrapper
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-top: 77.5px
+	.prev
+		transform: rotate(180deg)
+		margin-right: 26px
+	.next
+		margin-left: 7px
+	.prev,
+	.next
+		width: 15.5px
+	.pagenation
+		display: flex
+		align-items: center
+		.page_num
+			width: 38px
+			height: 38px
+			display: flex
+			align-items: center
+			justify-content: center
+			font-family: Montserrat
+			font-size: 13.25px
+			font-weight: bold
+			color: #008ef0
+			border: 2px solid #008ef0
+			border-radius: 30px
+			margin-right: 19px
+			&.active
+				color: #ffffff
+				background: #008ef0
+		.coda
+			margin: 8px 9px 0 -9px
+			font-size: 12px
+			span
+				color: #008ef0
+.wanted_wrapper
+	width: 86.67vw
+	margin: 0 auto
+	min-width: 1189.945px
+	.wanted
+		&.shop
+			width: calc(100% - 84px)
+			min-width: 1080px
+			margin-left: auto
+			margin-right: auto
+			.banner
+				width: 100%
+				min-width: 1080px
+
+@media screen and (max-width: 750px)
+	html
+		body
+			header
+				width: 689.8px
+				height: 100vh
+				nav
+					.global_nav
+						&.pc
+							display: none
+						&.sp
+							margin-right: -100vw
+							transition: .3s
+							&.active
+								background-color: #008ef0
+								margin-top: 0
+								width: 100vw
+								height: 100vh
+								position: absolute
+								z-index: 3
+								top: 0
+								display: block
+								.close
+									position: absolute
+									top: 34px
+									right: 22px
+									width: 20px
+								ul
+									li
+										a
+											color: #ffffff
