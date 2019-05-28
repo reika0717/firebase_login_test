@@ -1,57 +1,61 @@
 var config = {
-  apiKey: "AIzaSyB86ZplRp50fWO53LYrsjaChiQvq7D-Ixc",
-  authDomain: "login-test-b692a.firebaseapp.com",
-  databaseURL: "https://login-test-b692a.firebaseio.com",
-  projectId: "login-test-b692a",
-  storageBucket: "login-test-b692a.appspot.com",
-  messagingSenderId: "867110472171"
+	apiKey: "AIzaSyDt_lkdDdJJRfG_M3WtITYXsfKdg-BW4t0",
+	authDomain: "iioffice-test.firebaseapp.com",
+	databaseURL: "https://iioffice-test.firebaseio.com",
+	projectId: "iioffice-test",
+	storageBucket: "iioffice-test.appspot.com",
+	messagingSenderId: "715721258818",
+	appId: "1:715721258818:web:d996a6a5297c76fb"
 };
 firebase.initializeApp(config);
 
 //DOM取得
+
+var login_cotainer = document.getElementById("login_cotainer");
 var inputarea = document.getElementById("input-area");
 var newuser = document.getElementById("newuser");
 var login = document.getElementById("login");
 var logout = document.getElementById("logout");
-var info = document.getElementById("info");
+var main_content = document.getElementById("main_content");
 
 //ログイン処理
-login.addEventListener("click", function(e) {
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
+login.addEventListener("click", function (e) {
+	var email = document.getElementById("email").value;
+	var password = document.getElementById("password").value;
 
-  firebase
-    .auth()
-    .signInWithEmailAndPassword(email, password)
-    .catch(function(error) {
-      alert("ログインできません（" + error.message + "）");
-    });
+	firebase
+		.auth()
+		.signInWithEmailAndPassword(email, password)
+		.catch(function (error) {
+			alert("ログインできません（" + error.message + "）");
+		});
 });
 
 //ログアウト処理
-logout.addEventListener("click", function() {
-  firebase.auth().signOut();
+logout.addEventListener("click", function () {
+	firebase.auth().signOut();
 });
 
 //認証状態の確認
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    loginDisplay();
-  } else {
-    logoutDisplay();
-  }
+firebase.auth().onAuthStateChanged(function (user) {
+	if (user) {
+		loginDisplay();
+	} else {
+		logoutDisplay();
+	}
 });
 
 function loginDisplay() {
-  logout.classList.remove("hide");
-  inputarea.classList.add("hide");
-
-  info.textContent = "ログイン中です！";
+	login_cotainer.classList.add("hide");
+	main_content.classList.remove('hide')
+	if (main_content.childElementCount === 0) {
+		location.reload()
+	}
 }
 
 function logoutDisplay() {
-  logout.classList.add("hide");
-  inputarea.classList.remove("hide");
+	logout.classList.add("hide");
+	inputarea.classList.remove("hide");
 
-  info.textContent = "";
+	main_content.textContent = "";
 }

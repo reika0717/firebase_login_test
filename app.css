@@ -1,0 +1,28 @@
+.header-title {
+	padding: 10px;
+	margin-bottom: 100px;
+	font-size: 18px;
+	border-bottom: 1px solid #aaa;
+}
+
+.hide {
+	display: none;
+}
+
+#main_content {
+	text-align: center;
+	font-size: 4em;
+	font-weight: bold;
+}
+
+#main_content.hide {
+	display: none;
+}
+
+#logout {
+	display: none;
+}
+
+#login_cotainer.hide {
+	display: none;
+}
