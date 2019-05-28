@@ -13,6 +13,25 @@ $(function() {
       }
     });
   } else if (window.location.href.split("/").pop() === "shop.html") {
+    //認証状態の確認
+    var config = {
+      apiKey: "AIzaSyDt_lkdDdJJRfG_M3WtITYXsfKdg-BW4t0",
+      authDomain: "iioffice-test.firebaseapp.com",
+      databaseURL: "https://iioffice-test.firebaseio.com",
+      projectId: "iioffice-test",
+      storageBucket: "iioffice-test.appspot.com",
+      messagingSenderId: "715721258818",
+      appId: "1:715721258818:web:d996a6a5297c76fb"
+    };
+    firebase.initializeApp(config);
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      console.log(user);
+      if (user) {
+      } else {
+        window.location.href = "index.html";
+      }
+    });
     $("#sort_by").on("click", () => {
       if ($("#sort_by").hasClass("hidden")) {
         $("#sort_by").removeClass("hidden");
