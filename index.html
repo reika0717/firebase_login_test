@@ -1,306 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
+    />
+    <link rel="stylesheet" href="css/default.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Document</title>
-  <link rel="stylesheet" href="app.css">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-  />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-  <link rel="stylesheet" href="css/default.css" />
-
-</head>
-
-<body>
-	<div id="login_cotainer" class="container">
-		<h1 class="header-title">ユーザー認証</h1>
-		<div id="input-area">
-			<input id="email" type="email" placeholder="メールアドレスを入力" required />
-			<input id="password" type="password" placeholder="パスワードを入力" required />
-			<button id="login">ログイン</button>
-		</div>
-		<button id="logout" class="hide">ログアウト</button>
-	</div>
-
-	<!-- テキスト表示用 -->
-	<div id="main_content" class="hide">
-    <header>
-      <nav>
-        <h1>
-          <a href="index.html">
-            <img src="svg/logo.svg" alt="" class="logo" />
-          </a>
-        </h1>
-        <ul class="global_nav pc">
-          <li class="active"><a href="index.html">TOP<span>トップ</a></span></li>
-          <li><a href="shop.html">SHOP INFORMATION<span>店舗情報</a></span></li>
-        </ul>
-        <div class="global_nav sp active">
-          <img src="svg/close.svg" alt="" class="close">
-          <ul>
-            <li class="active"><a href="index.html">TOP<span>トップ</a></span></li>
-            <li><a href="shop.html">SHOP INFORMATION<span>店舗情報</a></span></li>  
-          </ul>
-          <p class="contact link_to_other">いいオフィスの出店や協業に関するお問い合わせ</p>
-          <p class="company link_to_other">運営会社</p>
-          <div class="banner">
-            <p class="banner_title">OWNER<br>WANTED</p>
-            <p class="banner_text">いいオフィスの出店や<br>協業に関するお問い合わせ</p>
-          </div>
-        </div>
-      </nav>
-      <div class="main_visual">
-        <div class="main_visual_text_wrapper">
-          <div class="main_copy_wrapper">
-            <img src="svg/ttl-flame.svg" alt="" class="ttl_flame" />
-            <p class="main_copy">
-              <span class="tsume"></span>より<br />働きやすい、<br />未来を。
-            </p>
-            <p class="sub_copy">“GOOD OFICE”<br />WILL CHANGE THE FUTURE</p>
-          </div>
-          <div class="title_contoler_wrapper">
-            <p class="news_title">NEWS</p>
-          </div>
-          <!-- If we need pagination -->
-          <div class="swiper-container">
-            <div class="swiper-pagination"></div>
-            <ul id="news_list" class="news_list swiper-wrapper">
-              <li class="news swiper-slide">
-                2019年5月1日12時よりサーバーメンテナンスを行います
-              </li>
-              <li class="news swiper-slide">
-                2019年5月1日12時よりサーバーメンテナンスを行います
-              </li>
-              <li class="news swiper-slide">
-                2019年5月1日12時よりサーバーメンテナンスを行います
-              </li>
-            </ul>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>             
-          </div>
-        </div>
-        <div class="main_visual_image_wrapper">
-          <img src="assets/pc-mv.jpg" alt="" class="main_visual_image" />
-          <img src="svg/arr-down-white.svg" id="down_scroll" class="down" alt="">
-        </div>
+  <body>
+    <div id="login_cotainer" class="container">
+      <h1 class="header-title">ユーザー認証</h1>
+      <div id="input-area">
+        <input
+          id="email"
+          type="email"
+          placeholder="メールアドレスを入力"
+          required
+        />
+        <input
+          id="password"
+          type="password"
+          placeholder="パスワードを入力"
+          required
+        />
+        <button id="login">ログイン</button>
       </div>
-    </header>
-    <img src="assets/pc-intro-kv.jpg" alt="" class="sub_visual" />
-    <div class="about_wrapper">
-      <img
-        src="assets/intro-img-01.jpg"
-        alt=""
-        class="sub_visual_small sub_visual_small_1"
-      />
-      <img
-        src="assets/intro-img-02.jpg"
-        alt=""
-        class="sub_visual_small sub_visual_small_2"
-      />
-      <img
-        src="assets/intro-img-03.jpg"
-        alt=""
-        class="sub_visual_small sub_visual_small_3"
-      />
-      <div class="concept_wrapper">
-        <p class="concept_title">CHANGE</p>
-        <br />
-        <p class="concept_title">THE WAY</p>
-        <br />
-        <p class="concept_title">YOU WORK</p>
-      </div>
-      <p class="concept_sub_title">
-        <span class="emphasis">働き方</span>を、<span class="tsume"></span
-        >もっと<span class="emphasis">自由</span>に。
-      </p>
-      <p class="concept_description">
-        いいオフィスは人々の働き方を<br />もっと自由にするコワーキングスペースです。<br />大都会から田舎まで、<br />すべての働く人たちの身近な場所に<br />快適なワークスペースをつくり、<br />場所にとらわれない働き方ができる<br />未来を築きます。
-      </p>
+      <button id="logout" class="hide">ログアウト</button>
     </div>
-    <div class="new_open_wrapper">
-      <div class="new_open_inner">
-        <h2 class="h2">
-          <p class="new_open_logo">新店<br />情報</p>
-          <p class="h2_title">NEW OPEN</p>
-        </h2>
-        <div class="new_open_content">
-          <div>
-            <img
-              src="assets/shop-img-02.jpg"
-              alt=""
-              class="office_img_active"
-            />
-            <div class="contoler">
-              <img src="svg/arr-prev-white.svg" alt="" class="prev" />
-              <p class="num">
-                <span class="active_num num">1</span>
-                <span class="slash">／</span>
-                <span class="total_num num">3</span>
+
+    <!-- テキスト表示用 -->
+    <div id="main_content" class="hide">
+      <header>
+        <nav>
+          <h1>
+            <a href="index.html">
+              <img src="svg/logo.svg" alt="" class="logo" />
+            </a>
+          </h1>
+          <ul class="global_nav pc">
+            <li class="active">
+              <a href="index.html">TOP<span>トップ</span></a>
+            </li>
+            <li>
+              <a href="shop.html">SHOP INFORMATION<span>店舗情報</span></a>
+            </li>
+          </ul>
+          <img
+            src="svg/hamburger.svg"
+            alt=""
+            id="sp_open_btn"
+            class="sp_open_btn"
+          />
+          <div id="global_nav_sp" class="global_nav sp">
+            <div class="sp_nav_inner">
+              <img
+                src="svg/close.svg"
+                alt=""
+                id="sp_close_btn"
+                class="sp_close_btn"
+              />
+              <ul>
+                <li class="active">
+                  <a href="index.html">TOP<span>トップ</span></a>
+                </li>
+                <li>
+                  <a href="shop.html">SHOP INFORMATION<span>店舗情報</span></a>
+                </li>
+              </ul>
+              <p class="contact link_to_other">
+                いいオフィスの出店や協業に関するお問い合わせ
               </p>
-              <img src="svg/arr-next-white.svg" alt="" class="next" />
+              <p class="company link_to_other">運営会社</p>
+              <div class="banner">
+                <img
+                  src="assets/pc-banner-img.png"
+                  alt=""
+                  class="banner_image"
+                />
+                <p class="banner_title">OWNER<br />WANTED</p>
+                <p class="banner_text">
+                  いいオフィスの出店や<br />協業に関するお問い合わせ
+                </p>
+              </div>
             </div>
           </div>
-          <div class="new_open_text">
-            <p class="office_name">いいオフィス日本橋 by<br />FUKUMITOYA</p>
-            <p class="office_address">
-              〒111-0056
-              <br />
-              東京都 台東区 小島 2-20-11
-            </p>
-            <a href="" class="office_google_map">
-              <img src="svg/placeholder.svg" alt="" class="placeholder_icon" />
-              GOOGLE MAP
-            </a>
-            <a href="" class="link_btn office_detail_link">VIEW DETAIL</a>
-            <ul class="office_pic_thumbnail">
-              <li>
-                <img
-                  src="assets/shop-img-02.jpg"
-                  alt=""
-                  class="office_small_pic office_small_pic_1"
-                />
+        </nav>
+        <div class="main_visual">
+          <div class="main_visual_text_wrapper">
+            <div class="main_copy_wrapper">
+              <img src="svg/ttl-flame.svg" alt="" class="ttl_flame" />
+              <p class="sp_title">より<br />働きやすい、<br />未来を。</p>
+              <p class="sp_sub_title">
+                "GOOD OFICE"<br />WILL CHANGE THE FUTURE
+              </p>
+            </div>
+            <div class="title_contoler_wrapper">
+              <p class="news_title">NEWS</p>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-container">
+              <div class="swiper-pagination"></div>
+              <ul id="news_list" class="news_list swiper-wrapper">
+                <li class="news swiper-slide">
+                  <span>
+                    2019年5月1日12時よりサーバーメンテナンスを行います
+                  </span>
+                </li>
+                <li class="news swiper-slide">
+                  <span>
+                    2019年5月1日12時よりサーバーメンテナンスを行います
+                  </span>
+                </li>
+                <li class="news swiper-slide">
+                  <span>
+                    2019年5月1日12時よりサーバーメンテナンスを行います
+                  </span>
+                </li>
+              </ul>
+              <div class="swiper-button_wrapper">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="main_visual_image_wrapper">
+            <img src="assets/pc-mv.jpg" alt="" class="main_visual_image" />
+            <img
+              src="svg/arr-down-white.svg"
+              id="down_scroll"
+              class="down"
+              alt=""
+            />
+          </div>
+        </div>
+      </header>
+      <img src="assets/pc-intro-kv.jpg" alt="" class="sub_visual" />
+      <div class="about_wrapper">
+        <img
+          src="assets/intro-img-01.jpg"
+          alt=""
+          class="sub_visual_small sub_visual_small_1"
+        />
+        <img
+          src="assets/intro-img-02.jpg"
+          alt=""
+          class="sub_visual_small sub_visual_small_2"
+        />
+        <img
+          src="assets/intro-img-03.jpg"
+          alt=""
+          class="sub_visual_small sub_visual_small_3"
+        />
+        <div class="concept_wrapper">
+          <p class="concept_title">CHANGE</p>
+          <br />
+          <p class="concept_title">THE WAY</p>
+          <br />
+          <p class="concept_title">YOU WORK</p>
+        </div>
+        <p class="concept_sub_title">
+          <span class="emphasis">働き方</span>を、<span class="tsume"></span
+          >もっと<span class="emphasis">自由</span>に。
+        </p>
+        <p class="concept_description">
+          いいオフィスは人々の働き方を<br />もっと自由にするコワーキングスペースです。<br />大都会から田舎まで、<br />すべての働く人たちの身近な場所に<br />快適なワークスペースをつくり、<br />場所にとらわれない働き方ができる<br />未来を築きます。
+        </p>
+      </div>
+      <div class="new_open_wrapper">
+        <div class="new_open_inner">
+          <h2 class="h2">
+            <p class="new_open_logo">新店<br />情報</p>
+            <p class="h2_title">NEW OPEN</p>
+          </h2>
+          <div class="swiper-container">
+            <div class="swiper-pagination"></div>
+            <ul class="new_open_list_wrapper swiper-wrapper">
+              <li class="new_open_list swiper-slide">
+                <div>
+                  <img src="assets/shop-img-01.jpg" alt="" class="office_img" />
+                </div>
+                <div class="new_open_text">
+                  <p class="office_name">
+                    いいオフィス日本橋 by<br />FUKUMITOYA
+                  </p>
+                  <p class="office_address">
+                    〒111-0056
+                    <br />
+                    東京都 台東区 小島 2-20-11
+                  </p>
+                  <a href="" class="office_google_map">
+                    <img
+                      src="svg/placeholder.svg"
+                      alt=""
+                      class="placeholder_icon"
+                    />
+                    GOOGLE MAP
+                  </a>
+                  <a href="" class="link_btn office_detail_link">VIEW DETAIL</a>
+                </div>
               </li>
-              <li>
-                <img
-                  src="assets/shop-img-02.jpg"
-                  alt=""
-                  class="office_small_pic office_small_pic_2"
-                />
+              <li class="new_open_list swiper-slide">
+                <div>
+                  <img src="assets/shop-img-02.jpg" alt="" class="office_img" />
+                </div>
+                <div class="new_open_text">
+                  <p class="office_name">
+                    いいオフィス日本橋 by<br />FUKUMITOYA
+                  </p>
+                  <p class="office_address">
+                    〒111-0056
+                    <br />
+                    東京都 台東区 小島 2-20-11
+                  </p>
+                  <a href="" class="office_google_map">
+                    <img
+                      src="svg/placeholder.svg"
+                      alt=""
+                      class="placeholder_icon"
+                    />
+                    GOOGLE MAP
+                  </a>
+                  <a href="" class="link_btn office_detail_link">VIEW DETAIL</a>
+                </div>
               </li>
-              <li>
-                <img
-                  src="assets/shop-img-02.jpg"
-                  alt=""
-                  class="office_small_pic office_small_pic_3"
-                />
+              <li class="new_open_list swiper-slide">
+                <div>
+                  <img src="assets/shop-img-03.jpg" alt="" class="office_img" />
+                </div>
+                <div class="new_open_text">
+                  <p class="office_name">
+                    いいオフィス日本橋 by<br />FUKUMITOYA
+                  </p>
+                  <p class="office_address">
+                    〒111-0056
+                    <br />
+                    東京都 台東区 小島 2-20-11
+                  </p>
+                  <a href="" class="office_google_map">
+                    <img
+                      src="svg/placeholder.svg"
+                      alt=""
+                      class="placeholder_icon"
+                    />
+                    GOOGLE MAP
+                  </a>
+                  <a href="" class="link_btn office_detail_link">VIEW DETAIL</a>
+                </div>
+              </li>
+              <li class="new_open_list swiper-slide">
+                <div>
+                  <img src="assets/shop-img-04.jpg" alt="" class="office_img" />
+                </div>
+                <div class="new_open_text">
+                  <p class="office_name">
+                    いいオフィス日本橋 by<br />FUKUMITOYA
+                  </p>
+                  <p class="office_address">
+                    〒111-0056
+                    <br />
+                    東京都 台東区 小島 2-20-11
+                  </p>
+                  <a href="" class="office_google_map">
+                    <img
+                      src="svg/placeholder.svg"
+                      alt=""
+                      class="placeholder_icon"
+                    />
+                    GOOGLE MAP
+                  </a>
+                  <a href="" class="link_btn office_detail_link">VIEW DETAIL</a>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-button_wrapper">
+              <div class="swiper-button swiper-button-prev"></div>
+              <div class="swiper-button swiper-button-next"></div>
+            </div>
+          </div>
+          <ul class="office_pic_thumbnail">
+            <li>
+              <img
+                src="assets/shop-img-02.jpg"
+                alt=""
+                class="office_small_pic office_small_pic_second"
+              />
+            </li>
+            <li>
+              <img
+                src="assets/shop-img-03.jpg"
+                alt=""
+                class="office_small_pic office_small_pic_third"
+              />
+            </li>
+            <li>
+              <img
+                src="assets/shop-img-04.jpg"
+                alt=""
+                class="office_small_pic office_small_pic_forth"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="shop_info">
+        <h2 class="h2">
+          <p class="shop_info_logo">店舗<br />情報</p>
+          <p class="h2_title">SHOP INFOMATION</p>
+        </h2>
+        <div class="shop_info_content">
+          <div class="shop_info_text">
+            <ul class="shop_list">
+              <li class="shop hokkaido disabled">
+                <a href="#hokkaido">北海道</a>
+              </li>
+              <li class="shop tohoku">
+                <a href="#tohoku">東北</a>
+              </li>
+              <li class="shop kanto">
+                <a href="#kanto">関東</a>
+              </li>
+              <li class="shop hokuriku">
+                <a href="#hokuriku">北陸・甲信越</a>
+              </li>
+              <li class="shop toukai">
+                <a href="#toukai">東海・近畿</a>
+              </li>
+              <li class="shop chugoku">
+                <a href="#chugoku">中国・四国</a>
+              </li>
+              <li class="shop kyushu disabled">
+                <a href="#kyushu">九州・沖縄</a>
+              </li>
+              <li class="shop abroad">
+                <a href="#abroad">海外</a>
               </li>
             </ul>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="shop_info">
-      <h2 class="h2">
-        <p class="shop_info_logo">店舗<br />情報</p>
-        <p class="h2_title">SHOP INFOMATION</p>
-      </h2>
-      <div class="shop_info_content">
-        <div class="shop_info_text">
-          <ul class="shop_list">
-            <li class="shop hokkaido disabled">
-              <a href="">北海道</a>
-            </li>
-            <li class="shop tohoku">
-              <a href="">東北</a>
-            </li>
-            <li class="shop kanto">
-              <a href="">関東</a>
-            </li>
-            <li class="shop hokuriku">
-              <a href="">北陸・甲信越</a>
-            </li>
-            <li class="shop toukai">
-              <a href="">東海・近畿</a>
-            </li>
-            <li class="shop chugoku">
-              <a href="">中国・四国</a>
-            </li>
-            <li class="shop kyushu disabled">
-              <a href="">九州・沖縄</a>
-            </li>
-            <li class="shop abroad">
-              <a href="">海外</a>
-            </li>
-          </ul>
-        </div>
-        <div class="shop_info_map">
-          <img src="svg/map.svg" alt="" class="japan_map" />
-          <div class="abroad_wrapper">
-            <p class="region_name abroad">海外</p>
-            <p class="region_num abroad">1</p>
+          <div class="shop_info_map">
+            <img src="svg/map.svg" alt="" class="japan_map" />
+            <div class="abroad_wrapper">
+              <p class="region_name abroad">海外</p>
+              <p class="region_num abroad">1</p>
+            </div>
+            <ul>
+              <li class="single_region hokkaido">
+                <p class="region_name hokkaido ">北海道</p>
+                <p class="region_num hokkaido ">0</p>
+              </li>
+              <li class="single_region tohoku">
+                <p class="region_name tohoku">東北</p>
+                <p class="region_num tohoku">1</p>
+              </li>
+              <li class="single_region kanto">
+                <p class="region_name kanto">関東</p>
+                <p class="region_num kanto big">10</p>
+              </li>
+              <li class="single_region hokuriku">
+                <p class="region_name hokuriku">北陸・甲信越</p>
+                <p class="region_num hokuriku">1</p>
+              </li>
+              <li class="single_region toukai">
+                <p class="region_name toukai">東海・近畿</p>
+                <p class="region_num toukai">1</p>
+              </li>
+              <li class="single_region chugoku">
+                <p class="region_name chugoku">中国・四国</p>
+                <p class="region_num chugoku">1</p>
+              </li>
+              <li class="single_region kyushu">
+                <p class="region_name kyushu ">九州・沖縄</p>
+                <p class="region_num kyushu ">1</p>
+              </li>
+            </ul>
+            <a class="link_for_region_status" href="">各地の出店状況</a>
           </div>
-          <ul>
-            <li class="single_region hokkaido">
-              <p class="region_name hokkaido ">北海道</p>
-              <p class="region_num hokkaido ">0</p>
-            </li>
-            <li class="single_region tohoku">
-              <p class="region_name tohoku">東北</p>
-              <p class="region_num tohoku">1</p>
-            </li>
-            <li class="single_region kanto">
-              <p class="region_name kanto">関東</p>
-              <p class="region_num kanto">10</p>
-            </li>
-            <li class="single_region hokuriku">
-              <p class="region_name hokuriku">北陸・甲信越</p>
-              <p class="region_num hokuriku">1</p>
-            </li>
-            <li class="single_region toukai">
-              <p class="region_name toukai">東海・近畿</p>
-              <p class="region_num toukai">1</p>
-            </li>
-            <li class="single_region chugoku">
-              <p class="region_name chugoku">中国・四国</p>
-              <p class="region_num chugoku">1</p>
-            </li>
-            <li class="single_region kyushu">
-              <p class="region_name kyushu ">九州・沖縄</p>
-              <p class="region_num kyushu ">1</p>
-            </li>
-          </ul>
-          <a class="link_for_region_status" href="">各地の出店状況</a>
+        </div>
+        <a class="link_btn">VIEW ALL</a>
+      </div>
+      <div class="wanted">
+        <div class="banner">
+          <img src="assets/pc-banner-img.png" class="banner_image" alt="" />
+          <div class="wanted_title_text">
+            <p class="wanted_title">OWNER WANTED</p>
+            <p class="wanted_text">
+              いいオフィスの出店や<span class="okuri"></span
+              >協業に関するお問い合わせ
+            </p>
+          </div>
+          <!-- <img src="" alt="" class="wanted_img" /> -->
+          <a class="link_btn">VIEW DETAIL</a>
         </div>
       </div>
-      <a class="link_btn">VIEW ALL</a>
-    </div>
-    <div class="wanted">
-      <div class="banner">
-        <img src="assets/pc-banner-img.png" class="banner_image" alt="" />
-        <p class="wanted_title">OWNER WANTED</p>
-        <p class="wanted_text">いいオフィスの出店や協業に関するお問い合わせ</p>
-        <!-- <img src="" alt="" class="wanted_img" /> -->
-        <a class="link_btn">VIEW DETAIL</a>
-      </div>
-    </div>
-    <footer>
-      <div class="footer_inner">
-        <img src="svg/arr-down-white.svg" id="scroll_to_top" class="scroll_to_top" alt="">
-        <h1 class="logo_wrapper">
-          <img src="svg/logo_white.svg" alt="" class="logo" />
-        </h1>
-        <div class="footer_text">
-          <ul class="site_map">
-            <li><a href="index.html">トップ</a></li>
-            <li><a href="shop.html">店舗情報</a></li>
-          </ul>
-          <ul class="contact">
-            <li><a href="">運営会社</a></li>
-            <li><a href="">いいオフィスの出店や協業に関するお問い合わせ</a></li>
-          </ul>
-          <p class="copyright">
-            <small>&copy;iioffice inc. All rights reserved</small>
-          </p>
+      <footer>
+        <div class="footer_inner">
+          <img
+            src="svg/arr-down-white.svg"
+            id="scroll_to_top"
+            class="scroll_to_top"
+            alt=""
+          />
+          <h1 class="logo_wrapper">
+            <img src="svg/logo_white.svg" alt="" class="logo" />
+          </h1>
+          <div class="footer_text">
+            <ul class="site_map">
+              <li><a href="index.html">トップ</a></li>
+              <li><a href="shop.html">店舗情報</a></li>
+            </ul>
+            <ul class="contact">
+              <li><a href="">運営会社</a></li>
+              <li>
+                <a href="">いいオフィスの出店や協業に関するお問い合わせ</a>
+              </li>
+            </ul>
+            <p class="copyright">
+              <small>&copy;iioffice inc. All rights reserved</small>
+            </p>
+          </div>
         </div>
-      </div>
-    </footer>
-	</div>
+      </footer>
+    </div>
 
-	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-  <script src="app.js"></script>
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-  <script src="js/default.js" type="text/javascript"></script>
-
-</body>
-
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="app.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="js/default.js" type="text/javascript"></script>
+  </body>
 </html>

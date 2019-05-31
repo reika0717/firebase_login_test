@@ -53,13 +53,22 @@ $BLACK: #1a1717
 		border-radius: 33px
 		background-color: #008ef0
 
+/* アニメーション */
+@keyframes marquee
+	0%
+		left: 0%
+		// transform: translate(0) 
+	100%
+		left: -100%
+		// transform:translate(-100%) 
+
 /* スタイル */
 html
 	// font-size: 1.25vw //16px
 	font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif
 	body
 		header
-			width: 1189.945px
+			width: 93.33vw
 			height: 100vh
 			margin: 4px auto 0
 			nav
@@ -103,6 +112,8 @@ html
 									background-color: $MAIN_COLOR
 						&:nth-of-type(2)
 							margin-left: 35.5px
+				.sp_open_btn
+					display: none
 			.main_visual
 				display: flex
 				margin-top: 24px
@@ -110,33 +121,36 @@ html
 					width: 32.14%
 					.main_copy_wrapper
 						position: relative
+						margin-top: 25%
+						left: 11.5%
 						.ttl_flame
-							width: 255.5px
-							position: absolute
-							top: 97px
-							left: 44px
-						.main_copy
-							font-size: 37px
-							font-weight: bold
-							letter-spacing: 1px
-							line-height: 1.29
-							color: #403c3c
-							text-align: center
-							margin-bottom: 11px
-							padding-top: 156px
-							.tsume
-								margin-left: -33px
-						.sub_copy
-							font-family: Montserrat
-							font-weight: 600
-							line-height: 1.5
-							letter-spacing: 0.6px
-							text-align: center
-							color: #322e2e
-							font-size: 10px
-							margin-left: -43px
+							width: 66.66%
+							margin: 0 auto
+						.sp_title,
+						.sp_sub_title
+							display: none
+						// .main_copy
+						// 	font-size: 37px
+						// 	font-weight: bold
+						// 	letter-spacing: 1px
+						// 	line-height: 1.29
+						// 	color: #403c3c
+						// 	text-align: center
+						// 	margin-bottom: 11px
+						// 	padding-top: 156px
+						// 	.tsume
+						// 		margin-left: -33px
+						// .sub_copy
+						// 	font-family: Montserrat
+						// 	font-weight: 600
+						// 	line-height: 1.5
+						// 	letter-spacing: 0.6px
+						// 	text-align: center
+						// 	color: #322e2e
+						// 	font-size: 10px
+						// 	margin-left: -43px
 					.title_contoler_wrapper
-						margin-top: 120px
+						margin-top: 93px
 						margin-bottom: -40px
 						.news_title
 							font-family: Montserrat
@@ -162,6 +176,7 @@ html
 							box-sizing: border-box
 							font-size: 12px
 							letter-spacing: 1px
+							z-index: -1
 							.swiper-pagination-current,
 							.swiper-pagination-total
 								font-family: Montserrat
@@ -171,46 +186,68 @@ html
 							margin-top: 21px
 							letter-spacing: 0.2px
 							height: 14px
+							width: 100% !important
 							.news
 								font-size: 14px
 								color: #322e2e
 								white-space: nowrap
-								width: 387.44px
-						.swiper-button-prev
-							width: 32.5px
-							height: 31.5px
-							background: url(../svg/arr-prev-white.svg) no-repeat
-							background-color: #008ef0
-							border-radius: 100px
-							opacity: 1 !important
-							background-size: 6px 11px
-							background-position: center
-							margin-left: 213px
-							top: 47%
-							&:hover
-								cursor: pointer
-								background-color: $MAIN_COLOR_HOVER
-						.swiper-button-next
-							width: 32.5px
-							height: 31.5px
-							background: url(../svg/arr-next-white.svg) no-repeat
-							background-color: #008ef0
-							border-radius: 100px
-							opacity: 1 !important
-							background-size: 6px 11px
-							background-position: center
-							top: 47%
-							margin-right: 29px
-							&:hover
-								cursor: pointer
-								background-color: $MAIN_COLOR_HOVER
+								width: 100% !important
+								&:hover
+									animation-name: marquee
+									animation-timing-function: linear
+									animation-duration: 10s
+									animation-iteration-count: infinite
+									span
+										display: inline-block
+										overflow: visible
+								span
+									width: 88%
+									display: block
+									overflow: hidden
+						.swiper-button_wrapper
+							width: 138.815px
+							display: flex
+							justify-content: space-between
+							margin: -11px 0 0 auto
+							transform: translate(-33px, -35px)
+							.swiper-button-prev
+								width: 31.5px
+								height: 31.5px
+								background: url(../svg/arr-prev-white.svg) no-repeat
+								background-color: #008ef0
+								border-radius: 100px
+								opacity: 1 !important
+								background-size: 6px 11px
+								background-position: center
+								position: relative
+								transition: .3s
+								&:hover
+									cursor: pointer
+									background-color: $MAIN_COLOR_HOVER
+								&:focus
+									outline: none
+							.swiper-button-next
+								width: 31.5px
+								height: 31.5px
+								background: url(../svg/arr-next-white.svg) no-repeat
+								background-color: #008ef0
+								border-radius: 100px
+								opacity: 1 !important
+								background-size: 6px 11px
+								background-position: center
+								position: relative
+								transition: .3s
+								&:hover
+									cursor: pointer
+									background-color: $MAIN_COLOR_HOVER
+								&:focus
+									outline: none
 				.main_visual_image_wrapper
-					width: 810px
-					height: 559px
+					width: 67.86%
 					position: relative
 					.main_visual_image
-						width: 810px
-						height: 559px
+						width: 100%
+						height: 74.46vh
 						transform: translateX(5px)
 						object-fit: cover
 						border-radius: 25px
@@ -236,8 +273,10 @@ html
 			position: relative
 			min-width: 1109.33px
 			.sub_visual_small
-				width: 255px
-				height: 366px
+				width: 20.4vw
+				height: 29vw
+				min-width: 255px
+				min-height: 366px
 				object-fit: cover
 				position: absolute
 				z-index: 2
@@ -255,24 +294,24 @@ html
 				text-align: center
 				padding-top: 179px
 				.concept_title
-					margin-bottom: 12px
 					font-family: Montserrat
-					font-size: 63px
+					font-size: 4.8vw
 					font-weight: 600
 					letter-spacing: 3.15px
 					text-align: center
 					color: #322e2e
 					display: inline-block
 					position: relative
+					line-height: 5.9vw
 					&:after
 						content: ''
 						display: inline-block
 						width: 101%
-						height: 4px
+						height: 5%
 						border-radius: 4px
 						background-color: #322e2e
 						position: absolute
-						top: 58px
+						bottom: 7%
 						left: 0
 			.concept_sub_title
 				text-align: center
@@ -299,6 +338,68 @@ html
 				width: 1109.33px
 				margin: 0 auto
 				padding: 132px 0 0 0
+				.swiper-container
+					margin: 0 auto -150px
+					margin-left: -150px
+					position: relative
+					list-style: none
+					padding: 0 0 150px 150px
+					.swiper-pagination
+						display: inline-block
+						text-align: left
+						left: 174px
+						bottom: 65px
+						box-sizing: border-box
+						font-size: 12px
+						letter-spacing: 1px
+						z-index: -1
+						color: #fff
+						.swiper-pagination-current,
+						.swiper-pagination-total
+							font-family: Montserrat
+							font-size: 14px
+							color: #fff
+					.swiper-button_wrapper
+						position: absolute
+						width: 164px
+						height: 30px
+						display: flex
+						justify-content: space-between
+						top: 508px
+						left: 110px
+						z-index: 100
+						.swiper-button-prev
+							width: 40.5px
+							height: 40.5px
+							background: url(../svg/arr-prev-white.svg) no-repeat
+							background-color: #008ef0
+							border-radius: 100px
+							opacity: 1 !important
+							background-size: 6px 11px
+							background-position: center
+							position: relative
+							transition: .3s
+							&:hover
+								cursor: pointer
+								background-color: $MAIN_COLOR_HOVER
+							&:focus
+								outline: none
+						.swiper-button-next
+							width: 40.5px
+							height: 40.5px
+							background: url(../svg/arr-next-white.svg) no-repeat
+							background-color: #008ef0
+							border-radius: 100px
+							opacity: 1 !important
+							background-size: 6px 11px
+							background-position: center
+							position: relative
+							transition: .3s
+							&:hover
+								cursor: pointer
+								background-color: $MAIN_COLOR_HOVER
+							&:focus
+								outline: none
 				.h2
 					display: flex
 					align-items: center
@@ -324,77 +425,80 @@ html
 					.h2_title
 						@include h2_title
 						color: #ffffff
-				.new_open_content
+				.new_open_list_wrapper
+					.new_open_list
+						display: flex
+						margin-top: 50px
+						.office_img
+							width: 552.4px
+							height: 391px
+							object-fit: cover
+							margin-left: 17px
+							border-radius: 13px
+						.contoler
+							@include controler
+							margin-right: 36px
+							margin-top: 59px
+							margin-left: -32px
+							.num
+								color: #fff
+								margin: 0 5px
+								.slash
+									margin-left: -4px
+									font-size: 8px
+							.prev,
+							.next
+								width: 10px
+								height: 10px
+								padding: 16px
+						.new_open_text
+							padding-left: 85.2px
+							margin-top: 17px
+							.office_name
+								font-size: 27px
+								font-weight: bold
+								line-height: 1.75em
+								color: #ffffff
+							.office_address
+								font-size: 15px
+								line-height: 1.85em
+								color: #ffffff
+								margin-top: 9px
+								margin-bottom: 9px
+							.office_google_map
+								font-family: Montserrat
+								font-size: 15px
+								color: #ffffff
+								text-decoration: none
+								margin-left: -5px
+								transition: .3s
+								&:hover
+									color: #008ef0
+								.placeholder_icon
+									width: 25.1px
+									margin-right: 2px
+									transform: translateY(8.2px)
+							.office_detail_link
+								@include button
+								display: block
+								width: 150px
+								margin-top: 50px
+								margin-left: 2px
+								transition: .3s
+								&:hover
+									background-color: $MAIN_COLOR_HOVER
+				.office_pic_thumbnail	
 					display: flex
 					margin-top: 50px
-					.office_img_active
-						width: 552.4px
-						height: 391px
+					margin-left: 614px
+					transform: translateY(41px)
+					justify-content: space-between
+					width: 467px
+					.office_small_pic
+						width: 126px
+						height: 126px
 						object-fit: cover
-						margin-left: 17px
-						border-radius: 13px
-					.contoler
-						@include controler
-						margin-right: 36px
-						margin-top: 59px
-						margin-left: -32px
-						.num
-							color: #fff
-							margin: 0 5px
-							.slash
-								margin-left: -4px
-								font-size: 8px
-						.prev,
-						.next
-							width: 10px
-							height: 10px
-							padding: 16px
-					.new_open_text
-						padding-left: 85.2px
-						margin-top: 17px
-						.office_name
-							font-size: 27px
-							font-weight: bold
-							line-height: 1.75em
-							color: #ffffff
-						.office_address
-							font-size: 15px
-							line-height: 1.85em
-							color: #ffffff
-							margin-top: 9px
-							margin-bottom: 9px
-						.office_google_map
-							font-family: Montserrat
-							font-size: 15px
-							color: #ffffff
-							text-decoration: none
-							margin-left: -5px
-							&:hover
-								color: #008ef0
-							.placeholder_icon
-								width: 25.1px
-								margin-right: 2px
-								transform: translateY(8.2px)
-						.office_detail_link
-							@include button
-							display: block
-							width: 150px
-							margin-top: 50px
-							margin-left: 2px
-							&:hover
-								background-color: $MAIN_COLOR_HOVER
-						.office_pic_thumbnail	
-							display: flex
-							margin-top: 119px
-							margin-left: -40px
-							transform: translateY(41px)
-							justify-content: space-between
-							width: 467px
-							.office_small_pic
-								width: 126px
-								height: 126px
-								object-fit: cover
-								border-radius: 100px
+						border-radius: 100px
 		.shop_info
 			width: 1110px
 			margin: 144px auto 0
@@ -443,6 +547,7 @@ html
 							a
 								color: $BLACK
 								text-decoration: none
+								transition: .3s
 							&:after
 								content: ''
 								width: 13px
@@ -553,7 +658,6 @@ html
 							&.tohoku
 								margin-right: 9px
 							&.kanto
-								transform: scale(2)
 								margin-right: 30px
 							&.hokuriku
 								margin-top: 10px
@@ -563,6 +667,8 @@ html
 								margin-top: 9px
 							&.kyushu
 								margin-bottom: 8px
+							&.big
+								transform: scale(2)
 					.link_for_region_status
 						text-decoration: none
 						font-size: 13px
@@ -670,6 +776,7 @@ html
 								letter-spacing: 0.9px
 								color: #ffffff
 								text-decoration: none
+								transition: .3s
 								&:hover
 									color: #008ef0
 							&:nth-of-type(2)
@@ -684,6 +791,7 @@ html
 								letter-spacing: 0.09px
 								color: #ffffff
 								text-decoration: none
+								transition: .3s
 							&:hover
 								a
 									color: #008ef0
@@ -775,10 +883,14 @@ html
 			justify-content: space-between
 			width: 664px
 			.region
-				font-size: 15px
-				font-weight: bold
+				a
+					font-size: 15px
+					font-weight: bold
+					color: #1a1717
+					text-decoration: none
 				&.all
-					color: #008ef0
+					a
+						color: #008ef0
 			&.hidden
 				display: none
 	.about_us
@@ -831,12 +943,12 @@ html
 		margin: 0 auto
 		.shop
 			width: calc((100% - 86px) / 3)
-			height: 586px
+			height: 42.3vw
+			min-height: 561px
 			position: relative
 			margin-top: 110px
 			.shop_image
 				width: 100%
-				height: 241.5px
 				object-fit: cover
 				border-radius: 15px
 			.shop_region
@@ -894,6 +1006,12 @@ html
 	.prev,
 	.next
 		width: 15.5px
+		&:hover
+			border: 2px solid #008ef0
+			background-color: #008ef0
+			padding: 9px 9px
+			border-radius: 30px
+			box-sizing: border-box
 	.pagenation
 		display: flex
 		align-items: center
@@ -910,7 +1028,12 @@ html
 			border: 2px solid #008ef0
 			border-radius: 30px
 			margin-right: 19px
+			transition: .3s
 			&.active
+				color: #ffffff
+				background: #008ef0
+			&:hover
+				cursor: pointer
 				color: #ffffff
 				background: #008ef0
 		.coda
@@ -935,31 +1058,624 @@ html
 @media screen and (max-width: 750px)
 	html
 		body
+			width: 100vw
+			overflow-x: hidden
 			header
-				width: 689.8px
+				width: 100vw
 				height: 100vh
 				nav
+					width: calc(100% - 30px)
+					margin: 0 auto
+					.logo
+						width: 44px
+						margin-top: 15.5px
+					.sp_open_btn
+						display: inline-block
+						position: absolute
+						width: 25px
+						height: 14px
+						right: 32px
+						top: 37px
 					.global_nav
 						&.pc
 							display: none
 						&.sp
-							margin-right: -100vw
-							transition: .3s
+							width: 100vw
+							height: 100vh
+							position: absolute
+							z-index: 3
+							top: 0
+							right: -100vw
+							display: block
+							background-color: #008ef0
+							transition: .5s
 							&.active
-								background-color: #008ef0
 								margin-top: 0
-								width: 100vw
-								height: 100vh
+								right: 0
+							.sp_nav_inner
+								width: 84vw
+								margin: 10.2vh auto 0
+							.sp_close_btn
 								position: absolute
-								z-index: 3
-								top: 0
-								display: block
-								.close
-									position: absolute
-									top: 34px
-									right: 22px
-									width: 20px
-								ul
-									li
+								top: 34px
+								right: 22px
+								width: 20px
+							ul
+								li
+									a
+										position: relative
+										color: #ffffff
+										font-size: 19px
+										text-align: left
+										letter-spacing: 2.4px
+									span
+										margin-top: 9px
+										margin-left: -1px
+									&.active
 										a
-											color: #ffffff
+											position: relative
+											&:before
+												background-color: #fff
+												margin: 0
+												position: absolute
+												top: 4px
+												left: -21px
+												width: 8px
+												height: 8px
+									&:nth-of-type(2)
+										margin-left: 0
+										margin-top: 31px
+										margin-bottom: 25px
+							.link_to_other
+								font-size: 13px
+								color: #ffffff
+								margin-left: -2px
+								letter-spacing: 1px
+								&:nth-of-type(2)
+									margin-top: 30px
+									margin-left: 0
+								&:after
+									content: ''
+									background-image: url('../svg/blank.svg')
+									width: 16px
+									height: 13.5px
+									margin-left: 5px
+									background-size: 15px 12.5px
+									background-position: 2.4px 0.4px
+									padding-bottom: 2px
+									transform: translateY(4.4px)
+									display: inline-block
+									background-repeat: no-repeat
+							.banner
+								background-color: #221f1f
+								border-radius: 16px
+								width: 99%
+								height: 179px
+								color: #ffffff
+								margin-top: 55px
+								margin-left: -5px
+								position: relative
+								.banner_image
+									width: 100%
+									height: 179px
+									object-fit: cover
+									border-radius: 16px
+								.banner_title
+									font-family: Montserrat
+									font-size: 23px
+									position: absolute
+									top: 36px
+									left: 31px
+									line-height: 30px
+									letter-spacing: 2.5px
+								.banner_text
+									font-size: 13px
+									position: absolute
+									left: 31px
+									top: 105px
+									line-height: 18px
+									letter-spacing: 1.2px
+				.main_visual
+					width: calc(100% - 30px)
+					margin: 24px auto 0
+					.main_visual_text_wrapper
+						position: absolute
+						width: 100%
+						z-index: 1
+						.main_copy_wrapper
+							position: relative
+							margin-top: 16%
+							left: 0
+							.ttl_flame
+								display: none
+							.sp_title
+								display: inline-block
+								font-size: 37.2px
+								font-weight: bold
+								padding-left: 12px
+								padding-top: 23vh
+								letter-spacing: 1px
+								line-height: 1.29
+								color: #403c3c
+								text-align: center
+								margin-bottom: 11px
+								padding-top: 156px
+								text-align: left
+							.sp_sub_title
+								display: inline-block
+								font-family: Montserrat
+								font-weight: 600
+								line-height: 1.5
+								letter-spacing: 0.6px
+								color: #322e2e
+								font-size: 12px
+								margin-left: 11px
+						.title_contoler_wrapper
+							padding-left: 18px
+							margin-top: 37px
+							margin-bottom: -40px
+							.news_title
+								&:before
+									width: 10px
+									height: 10px
+									margin: -1px 10px 0 2px		
+						.swiper-container
+							padding-top: 48px
+							padding-bottom: 12px
+							.swiper-pagination
+							.news_list
+								margin-top: 17px
+								.news
+									padding-left: 10px
+									span
+										width: 81%
+							.swiper-button_wrapper
+								.swiper-button-prev,
+								.swiper-button-next
+									display: none
+					.main_visual_image_wrapper
+						width: 100%
+						.main_visual_image
+							height: 41.7vh
+							transform: translateX(0px)
+						.down
+							display: none
+			.sub_visual
+				width: 100vw
+				height: 190px
+				min-width: 0
+				margin-top: -3px
+			.about_wrapper
+				min-width: 0
+				width: 100vw
+				margin: 0 auto
+				.sub_visual_small
+					display: none
+				.concept_wrapper
+					width: 100vw
+					text-align: center
+					padding-top: 44px
+					.concept_title
+						font-size: 40px
+						font-weight: 900
+						letter-spacing: 4.15px
+						text-align: center
+						line-height: 51px
+				.concept_sub_title
+					text-align: center
+					font-size: 23px
+					font-weight: bold
+					letter-spacing: 2.1px
+					color: #322e2e
+					width: 100vw
+					margin: 35px 0 28px 8px
+					.emphasis
+				.concept_description
+					width: 100vw
+					text-align: center
+					color: #322e2e
+					font-size: 17px
+					line-height: 35px
+			.new_open_wrapper
+				min-width: 0
+				margin-top: 80px
+				.new_open_inner
+					margin: 0 auto
+					padding-top: 56px
+					min-width: 0
+					width: 100vw
+					.h2
+						margin-left: 0
+						height: 95px
+						padding: 0 37px
+						margin-bottom: -31px
+						.new_open_logo
+							font-size: 13px
+							width: 69px
+							height: 65px
+							padding-top: 22px
+							margin-right: 6px
+							background-position: 2px 0px
+							transform: translate(-8px, -2px)							
+						.h2_title
+							font-size: 33px
+							margin-bottom: -13px
+					.swiper-container
+						position: relative
+						list-style: none
+						margin: 0
+						padding: 0
+						width: 100vw
+						.swiper-pagination
+							display: none
+						.new_open_list_wrapper
+							.new_open_list
+								display: inline-block
+								width: 100% !important
+								padding: 0 30px
+								box-sizing: border-box
+								.office_img
+									width: 100%
+									margin: 0 auto
+									height: 37vh
+								.new_open_text
+									padding-left: 0
+									margin-left: 0px
+									margin-top: 26px
+									.office_name
+										font-size: 24.1px
+									.office_address
+										margin-top: 14px
+										margin-bottom: 24px
+									.office_google_map
+										font-size: 16.6px
+										margin-left: -3px
+										.placeholder_icon
+											width: 27.2px
+											margin-right: 3px
+									.office_detail_link
+										margin-top: 42px
+										padding: 30px 32.9px
+										width: calc(100% - 60px)
+										display: flex
+										justify-content: space-between
+										&:after
+											margin-left: 61%
+											width: 16px
+											height: 11.5px
+						.swiper-button_wrapper
+							width: 100%
+							height: 30px
+							top: 25%
+							left: 50%
+							transform: translateX(-50%)
+							.swiper-button
+								width: 47.5px
+								height: 47.5px
+							.swiper-button-prev
+							.swiper-button-next
+					.office_pic_thumbnail
+						.office_small_pic
+							display: none
+			.shop_info
+				width: 100vw
+				padding: 0 30px
+				margin-top: 81px
+				box-sizing: border-box
+				.h2
+					.shop_info_logo
+						margin-right: 15px
+						font-size: 11px
+						letter-spacing: 2.1px
+						width: 62px
+						min-width: 31px
+						height: 67px
+						padding-top: 19px
+						padding-left: 4px
+						line-height: 17px
+						box-sizing: border-box
+						margin-right: 19px
+						background-position: center center
+						background-size: 94%
+					.h2_title
+						font-size: 33px
+						width: 220px
+						letter-spacing: 0
+				.shop_info_content
+					flex-direction: column-reverse
+					margin-top: 34px
+					width: 100%
+					.shop_info_text
+						.shop_list
+							width: 100%	
+							margin-right: 0	
+							display: flex	
+							flex-wrap: wrap	
+							justify-content: space-between	
+							margin-top: 33px	
+							.shop
+								width: calc((100% - 28.5px) / 2)
+								height: 39px
+								padding-bottom: 0px
+								font-size: 15px
+								line-height: 4.95
+								border-bottom: 1px solid rgba(0, 0, 0, .5)
+								margin-top: 6px
+								padding-left: 0
+								margin-left: 0
+								display: flex
+								align-items: center
+								justify-content: space-between
+								a
+									white-space: nowrap
+								&:after
+									margin-right: 13px
+									background-repeat: no-repeat
+								&:hover
+									a
+								&.disabled
+									a
+									&:after
+					.shop_info_map
+						width: 100%
+						height: 68vw
+						margin-top: 6px
+						.japan_map
+							width: 85%
+							top: 50.8%
+							left: 49.5%
+							transform: translate(-50%, -50%)
+						.abroad_wrapper
+							border: none
+							margin-top: 11%
+							margin-left: -1%
+						.region_name
+							&.abroad
+								font-size: 13px
+								margin-bottom: 9px
+						.region_num
+							&.abroad
+								width: 30px
+								height: 30px
+						.single_region
+							&.hokkaido
+								top: 9.6%
+								right: 14.2%
+							&.tohoku
+								top: 45%
+								right: 16%
+							&.kanto
+								top: 65.7%
+								right: 24%
+							&.hokuriku
+								top: 35%
+								width: 13%
+								right: 38%
+							&.toukai
+								top: 67%
+								right: 44%
+							&.chugoku
+								top: 54%
+								right: 61.6%
+							&.kyushu
+								top: 71%
+								right: 73%
+							.region_name
+								font-size: 13px
+								&.hokuriku
+									line-height: 18px
+							.region_num
+								width: 30px
+								height: 30px
+								&.hokkaido
+								&.tohoku
+									margin-right: 9px
+								&.kanto
+									margin-right: 18px
+								&.hokuriku
+								&.toukai
+								&.chugoku
+								&.kyushu
+								&.big
+									transform: scale(1.4)
+						.link_for_region_status
+							bottom: auto
+							right: auto
+							top: 14px
+							left: 14px
+							padding: 12px 10px
+							font-size: 12px
+				.link_btn
+					width: calc(100vw - 60px)
+					margin-left: 0
+					box-sizing: border-box
+					padding: 31px 32.9px
+					margin-top: 53px
+					&:after
+						margin-left: 67.5%
+			.wanted
+				margin-top: 76px
+				.banner
+					min-width: 0
+					width: calc(100vw - 60px)
+					height: 24vh
+					position: relative
+					.banner_image
+						height: 24vh
+					.wanted_title_text
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						.wanted_title
+							transform: translateY(0)
+							font-size: 24px
+							margin-left: 28px
+							width: 0px
+							width: 119px
+							line-height: 29px
+							letter-spacing: 1.4px
+						.wanted_text
+							transform: translateY(0)
+							margin-left: 28px
+							width: 178px
+							line-height: 18px
+							letter-spacing: -0.5px
+							margin-top: 7px
+						.okuri
+							width: 30px
+							display: inline-block
+					.link_btn
+						display: none
+			footer
+				min-width: 0
+				margin-top: 75px
+				padding-bottom: 20px
+				.footer_inner
+					padding-top: 41px
+					display: block
+					min-width: 0
+					text-align: center
+					.scroll_to_top
+						width: 12.5px
+						height: 15.5px
+						padding: 18.8px 20.3px
+						top: -28px
+						right: 5px
+					.logo_wrapper
+						.logo
+								width: 76px
+					.footer_text
+						.site_map
+							display: flex
+							justify-content: center
+							margin-top: 24px
+							li
+								a
+									font-size: 13px
+									letter-spacing: 2.6px
+								&:nth-of-type(2)
+									margin-left: 20.5px
+						.contact
+							display: flex
+							flex-direction: column
+							justify-content: center
+							margin-top: 30px
+							li
+								a
+									font-size: 13px
+									letter-spacing: 1px
+								&:nth-of-type(2)
+									margin-left: 0
+									margin-top: 30px
+						.copyright
+							text-align: center
+							margin-top: 50px
+							letter-spacing: 0.1px
+	/* shop page */
+	.shop_header
+		width: 100vw
+		min-width: 0
+		.shop_title
+			font-size: 37px
+			margin-top: 9vh
+			margin-left: 30px
+			line-height: 46px
+		.shop_sub_title	
+			margin-left: 30px
+			margin-top: 16px
+			font-size: 16px
+			.line
+				margin: 0 9px
+		.sort_section
+			flex-direction: column
+			align-items: flex-start
+			.sort_by
+				margin-left: 30px
+				margin-top: 44px
+				width: 190px
+				padding: 19px 31.9px
+				letter-spacing: -0.35px
+				&:after
+					background-size: 14px 10.5px
+					background-position: 9px 2.4px
+					margin-left: 51px
+				&.hidden
+					&:after
+						margin-left: 51px
+						background-size: 12px 12px
+						background-position: 1.4px 2.4px
+			.region_list
+				width: 100vw
+				margin-top: 0
+				margin-left: 0
+				box-sizing: border-box
+				padding: 20px 30px 0 30px
+				flex-wrap: wrap
+				justify-content: flex-start
+				.region
+					margin-right: 31px
+					line-height: 36px
+		.about_us
+			margin-top: 43px
+			width: calc(100vw - 60px)
+			min-width: 0
+			flex-direction: column
+			padding: 42px 27px 49px 27px
+			.about_us_title
+				.en
+					font-size: 17px
+					letter-spacing: .85px
+				.ja
+					font-size: 24px
+					margin-top: 20px
+					letter-spacing: 1px
+			.about_us_text
+				margin-left: 0
+				margin-top: 22px
+				line-height: 26.1px
+	.shop_list_wrapper
+		width: 86.67vw
+		min-width: 1189.945px
+		margin: 0 auto
+		.shop_list
+			min-width: 0
+			width: 100vw
+			justify-content: flex-start
+			flex-wrap: wrap
+			margin: 0
+			.shop
+				width: 100%
+				padding: 0 30px
+				height: 520px
+				min-height: 0
+				margin-top: 74px
+				.shop_image
+					width: 100%
+				.shop_region
+					right: 54px
+					top: 190px
+				.shop_name
+					margin-top: 23px
+					line-height: 36px
+				.shop_address
+					margin-top: 11px
+					line-height: 26px
+				.link_for_detail
+					position: relative
+					width: calc(100% - 60px)
+					margin-top: 39px
+					padding: 25px 29.9px
+					display: flex
+					justify-content: space-between
+	.wanted_wrapper
+		min-width: 0
+		width: calc(100vw - 60px)
+		margin: 0 auto
+		.wanted
+			&.shop
+				min-width: 0
+				margin: 76px 0 0 0
+				width: 100%
+				.banner
+					min-width: 0
+					width: 100%
