@@ -1,6 +1,7 @@
 $(function() {
-  if (window.location.href.split("/").pop() === "index.html") {
-    //ニュース蘭slider
+  var filename_ex = window.location.href.match(".+/(.+?)([?#;].*)?$")[1];
+  if (filename_ex === "index.html") {
+    //ニュース欄, NEW OPEN slider
     var mySwiper = new Swiper(".swiper-container", {
       pagination: {
         el: ".swiper-pagination",
@@ -10,28 +11,42 @@ $(function() {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
-      }
+      },
+      loop: true
     });
-  } else if (window.location.href.split("/").pop() === "shop.html") {
-    //認証状態の確認
-    var config = {
-      apiKey: "AIzaSyDt_lkdDdJJRfG_M3WtITYXsfKdg-BW4t0",
-      authDomain: "iioffice-test.firebaseapp.com",
-      databaseURL: "https://iioffice-test.firebaseio.com",
-      projectId: "iioffice-test",
-      storageBucket: "iioffice-test.appspot.com",
-      messagingSenderId: "715721258818",
-      appId: "1:715721258818:web:d996a6a5297c76fb"
-    };
-    firebase.initializeApp(config);
 
-    firebase.auth().onAuthStateChanged(function(user) {
-      console.log(user);
-      if (user) {
-      } else {
-        window.location.href = "index.html";
+    // NEW OPEN thumbnail
+    $(".swiper-button").on("click", () => {
+      let active_pic_src = $(".swiper-slide-active")
+        .find(".office_img")
+        .attr("src");
+      let active_num = active_pic_src.substr(-6, 2);
+      active_num = Number(active_num);
+      second_num = (active_num + 1) % 4;
+      third_num = (active_num + 2) % 4;
+      forth_num = (active_num + 3) % 4;
+      if (second_num === 0) {
+        second_num = 4;
+      } else if (third_num === 0) {
+        third_num = 4;
+      } else if (forth_num === 0) {
+        forth_num = 4;
       }
+
+      $(".office_small_pic_second").attr(
+        "src",
+        "assets/shop-img-0" + second_num + ".jpg"
+      );
+      $(".office_small_pic_third").attr(
+        "src",
+        "assets/shop-img-0" + third_num + ".jpg"
+      );
+      $(".office_small_pic_forth").attr(
+        "src",
+        "assets/shop-img-0" + forth_num + ".jpg"
+      );
     });
+  } else if (filename_ex === "shop.html") {
     $("#sort_by").on("click", () => {
       if ($("#sort_by").hasClass("hidden")) {
         $("#sort_by").removeClass("hidden");
@@ -66,5 +81,23 @@ $(function() {
         easing: "swing"
       }
     );
+  });
+
+  /* spメニュートグルOPEN */
+  $("#sp_open_btn").on("click", () => {
+    if (
+      $("#global_nav_sp")
+        .attr("class")
+        .indexOf("active") === -1
+    ) {
+      $("#global_nav_sp").addClass("active");
+    }
+  });
+
+  /* spメニュートグル CLOSE */
+  $("#sp_close_btn").on("click", () => {
+    console.log($("#global_nav_sp").attr("class"));
+    $("#global_nav_sp").removeClass("active");
+    console.log($("#global_nav_sp").attr("class"));
   });
 });
