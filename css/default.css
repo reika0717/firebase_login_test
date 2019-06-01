@@ -75,7 +75,7 @@ html {
           margin-top: 93px;
           margin-bottom: -40px; }
           html body header .main_visual .main_visual_text_wrapper .title_contoler_wrapper .news_title {
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-size: 17px;
             font-weight: 600;
             letter-spacing: 1.15px;
@@ -101,7 +101,7 @@ html {
             z-index: -1; }
             html body header .main_visual .main_visual_text_wrapper .swiper-container .swiper-pagination .swiper-pagination-current,
             html body header .main_visual .main_visual_text_wrapper .swiper-container .swiper-pagination .swiper-pagination-total {
-              font-family: Montserrat;
+              font-family: 'Montserrat', sans-serif;
               font-size: 14px;
               color: #322e2e; }
           html body header .main_visual .main_visual_text_wrapper .swiper-container .news_list {
@@ -215,7 +215,7 @@ html {
       text-align: center;
       padding-top: 179px; }
       html body .about_wrapper .concept_wrapper .concept_title {
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         font-size: 4.8vw;
         font-weight: 600;
         letter-spacing: 3.15px;
@@ -277,7 +277,7 @@ html {
           color: #fff; }
           html body .new_open_wrapper .new_open_inner .swiper-container .swiper-pagination .swiper-pagination-current,
           html body .new_open_wrapper .new_open_inner .swiper-container .swiper-pagination .swiper-pagination-total {
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-size: 14px;
             color: #fff; }
         html body .new_open_wrapper .new_open_inner .swiper-container .swiper-button_wrapper {
@@ -344,7 +344,7 @@ html {
           margin-right: 22px;
           background-position: -2px 0px; }
         html body .new_open_wrapper .new_open_inner .h2 .h2_title {
-          font-family: Montserrat;
+          font-family: 'Montserrat', sans-serif;
           font-size: 55px;
           font-weight: 600;
           color: #ffffff; }
@@ -365,7 +365,7 @@ html {
           margin-top: 59px;
           margin-left: -32px; }
           html body .new_open_wrapper .new_open_inner .new_open_list_wrapper .new_open_list .contoler .num {
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-size: 14px;
             color: #322e2e;
             margin: 0 11px 0 9px; }
@@ -404,7 +404,7 @@ html {
             margin-top: 9px;
             margin-bottom: 9px; }
           html body .new_open_wrapper .new_open_inner .new_open_list_wrapper .new_open_list .new_open_text .office_google_map {
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-size: 15px;
             color: #ffffff;
             text-decoration: none;
@@ -417,7 +417,7 @@ html {
               margin-right: 2px;
               transform: translateY(8.2px); }
           html body .new_open_wrapper .new_open_inner .new_open_list_wrapper .new_open_list .new_open_text .office_detail_link {
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-size: 13px;
             letter-spacing: .65px;
             color: #ffffff;
@@ -481,7 +481,7 @@ html {
         margin-right: 19px;
         background-position: -2px 0px; }
       html body .shop_info .h2 .h2_title {
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         font-size: 55px;
         font-weight: 600;
         color: #1a1717; }
@@ -554,7 +554,7 @@ html {
             margin-top: 4px;
             margin-left: 2px; }
         html body .shop_info .shop_info_content .shop_info_map .region_num {
-          font-family: Montserrat;
+          font-family: 'Montserrat', sans-serif;
           font-size: 10px;
           font-weight: 600;
           color: #ffffff;
@@ -635,7 +635,7 @@ html {
           right: 51px;
           bottom: 42px; }
     html body .shop_info .link_btn {
-      font-family: Montserrat;
+      font-family: 'Montserrat', sans-serif;
       font-size: 13px;
       letter-spacing: .65px;
       color: #ffffff;
@@ -681,7 +681,7 @@ html {
         border-radius: 15px;
         position: absolute; }
       html body .wanted .banner .wanted_title {
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         font-size: 45px;
         font-weight: 600;
         color: #ffffff;
@@ -694,7 +694,7 @@ html {
         margin-left: 83px;
         transform: translateY(111px); }
       html body .wanted .banner .link_btn {
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         font-size: 13px;
         letter-spacing: .65px;
         color: #ffffff;
@@ -797,7 +797,7 @@ html {
         html body footer .footer_inner .footer_text .contact li:nth-of-type(2) {
           margin-left: 36.5px; }
       html body footer .footer_inner .footer_text .copyright {
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         font-size: 12px;
         color: rgba(255, 255, 255, 0.3);
         text-align: right;
@@ -809,7 +809,7 @@ html {
   width: 86.67vw;
   min-width: 1189.945px; }
   .shop_header .shop_title {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 80px;
     font-weight: 600;
     line-height: 1;
@@ -833,7 +833,7 @@ html {
     display: flex;
     align-items: center; }
     .shop_header .sort_section .sort_by {
-      font-family: Montserrat;
+      font-family: 'Montserrat', sans-serif;
       font-size: 13px;
       letter-spacing: .65px;
       color: #ffffff;
@@ -909,7 +909,7 @@ html {
     padding: 51px 90px 54px 41px;
     box-sizing: border-box; }
     .shop_header .about_us .about_us_title .en {
-      font-family: Montserrat;
+      font-family: 'Montserrat', sans-serif;
       font-size: 17px;
       font-weight: 600;
       letter-spacing: .85px;
@@ -983,7 +983,7 @@ html {
         display: flex;
         align-items: center; }
         .shop_list_wrapper .shop_list .shop .google p {
-          font-family: Montserrat;
+          font-family: 'Montserrat', sans-serif;
           font-size: 15px;
           color: #1a1717;
           margin-top: 17px; }
@@ -993,7 +993,7 @@ html {
           margin-top: 20px;
           margin-left: -5px; }
       .shop_list_wrapper .shop_list .shop .link_for_detail {
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         font-size: 13px;
         letter-spacing: .65px;
         color: #ffffff;
@@ -1049,7 +1049,7 @@ html {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: Montserrat;
+      font-family: 'Montserrat', sans-serif;
       font-size: 13.25px;
       font-weight: bold;
       color: #008ef0;
@@ -1106,6 +1106,7 @@ html {
         html body header nav .global_nav.pc {
           display: none; }
         html body header nav .global_nav.sp {
+          display: none;
           width: 100vw;
           height: 100vh;
           position: absolute;
@@ -1116,6 +1117,7 @@ html {
           background-color: #008ef0;
           transition: .5s; }
           html body header nav .global_nav.sp.active {
+            display: block;
             margin-top: 0;
             right: 0; }
           html body header nav .global_nav.sp .sp_nav_inner {
@@ -1184,7 +1186,7 @@ html {
               object-fit: cover;
               border-radius: 16px; }
             html body header nav .global_nav.sp .banner .banner_title {
-              font-family: Montserrat;
+              font-family: 'Montserrat', sans-serif;
               font-size: 23px;
               position: absolute;
               top: 36px;
@@ -1226,7 +1228,7 @@ html {
               text-align: left; }
             html body header .main_visual .main_visual_text_wrapper .main_copy_wrapper .sp_sub_title {
               display: inline-block;
-              font-family: Montserrat;
+              font-family: 'Montserrat', sans-serif;
               font-weight: 600;
               line-height: 1.5;
               letter-spacing: 0.6px;
